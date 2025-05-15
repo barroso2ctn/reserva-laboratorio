@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPA de Reservas - Sala de Projetos de Extensão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>UNIFESSPA/IFACSI - Laboratório de Projetos de Pesquisa e Extensão</h1>
+        <h2>MAPA de Reservas - Sala de Projetos de Extensão</h2>
+    </header>
+    <main>
+        <table id="reservation-table">
+            <thead>
+                <tr>
+                    <th>ARMÁRIO</th>
+                    <th>ARMÁRIO</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="cabinet">ARMÁRIO</td>
+                    <td class="cabinet">ARMÁRIO</td>
+                    <td class="desk" data-desk="1">Disponível</td>
+                    <td class="desk" data-desk="2">Disponível</td>
+                    <td class="desk" data-desk="3">Disponível</td>
+                    <td class="desk" data-desk="4">Disponível</td>
+                    <td class="desk" data-desk="5">Disponível</td>
+                    <td class="desk" data-desk="6">Disponível</td>
+                    <td class="desk" data-desk="7">Disponível</td>
+                    <td class="desk" data-desk="8">Disponível</td>
+                    <td class="desk" data-desk="9">Disponível</td>
+                    <td class="desk" data-desk="10">Disponível</td>
+                    <td class="desk" data-desk="11">Disponível</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="instructions">
+            <p><strong>Instruções:</strong> Clique em uma mesa para agendar. Preencha os detalhes e confirme. O sistema verifica conflitos de horário. Reservas são salvas no Google Sheets.</p>
+        </div>
+        <!-- Modal para agendamento -->
+        <div id="reservation-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <h3>Agendamento de Mesa <span id="desk-number"></span></h3>
+                <p id="error-message" style="color: red; display: none;"></p>
+                <form id="reservation-form">
+                    <label for="user-name">Nome:</label>
+                    <input type="text" id="user-name" name="user-name" required>
+                    <label for="reservation-date">Data:</label>
+                    <input type="date" id="reservation-date" name="reservation-date" required>
+                    <label for="start-time">Hora Inicial:</label>
+                    <input type="time" id="start-time" name="start-time" required>
+                    <label for="end-time">Hora Final:</label>
+                    <input type="time" id="end-time" name="end-time" required>
+                    <button type="submit" id="confirm-reservation">Confirmar Reserva</button>
+                    <button type="button" id="cancel-reservation" style="display: none;">Cancelar Reserva</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 UNIFESSPA/IFACSI. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
