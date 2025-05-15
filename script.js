@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const reservations = {};
 
     // URL do Google Apps Script (substitua pelo seu URL)
-    const googleScriptUrl = 'https://script.google.com/a/macros/unifesspa.edu.br/s/AKfycbyCfm79GD4cWonCOmWS_fEBpVfkOVp5ZAmgZ6aJDxhs/dev'; // Exemplo: https://script.google.com/macros/s/ABC123/exec
+    const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbxqHAk2SUHNT8aFtygAsaSaX3fjW-7i3MSjove-H5GDkQRVAHqnkT5OCBSXEllV3ZJ_lA/exec'; // Exemplo: https://script.google.com/macros/s/ABC123/exec
 
     // Carregar reservas existentes
     async function loadReservations() {
